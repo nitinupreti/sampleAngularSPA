@@ -10,7 +10,7 @@ const CardPanelComponentEditConfig = {
 @Component({
   selector: 'app-card-panel',
   templateUrl: './card-panel.component.html',
-  styleUrls: ['./card-panel.component.scss']
+  styleUrls: ['./card-panel.component.scss','./tachyons.css']
 })
 export class CardPanelComponent implements OnInit {
   @Input() title: string;

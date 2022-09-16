@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Card Panel"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <details
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Title"
+                                                fieldLabel="Title"
+                                                name="./title"
+                                                required="{Boolean}true"
+                                                value="Chart of the Week"/>
+                                            <subtitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Subtitle"
+                                                fieldLabel="Subtitle"
+                                                name="./subtitle"
+                                                required="{Boolean}true"
+                                                value="European Gas Futures Jump as Gazprom Halts Supplies"/>
+                                            <description
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                fieldDescription="Descrtiption"
+                                                fieldLabel="Description"
+                                                name="./description"
+                                                required="{Boolean}true"
+                                                value="European gas prices were on the rise again after Russia’s most recent move to exploit the region’s reliance on its energy. Russian company Gazprom, which has a monopoly on pipeline gas in Russia, released a statement that gas supplies to Poland and Bulgaria were suspended because it had not received payment in rubles. Since the Ukraine invasion began, Russia has transitioned to accepting payments in rubles rather than US dollars or euros as a response to sanctions from Western nations. European wholesale gas futures jumped 20% on the news before paring gains to trade 8% higher at €107 (US$113) per megawatt hour. Prices settled nearly 40% higher on a year-to-date basis with the price increase tallying close to 500% year over year. European leaders fired back, stating that they were being “blackmailed” by Russia and accusing it of “gas imperialism.” Although Russia supplies nearly 50% of gas to the countries that were cut off, local officials said the current supply was stable and alternative delivery options were being explored."/>
+                                            <file
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                allowUpload="{Boolean}false"
+                                                class="cq-droptarget"
+                                                fieldDescription="Image"
+                                                fieldLabel="Image"
+                                                fileNameParameter="./fileName"
+                                                fileReferenceParameter="./fileReference"
+                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                                name="./file"
+                                                required="{Boolean}true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </details>
+                    <cq:styles
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/include"
+                        path="/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
