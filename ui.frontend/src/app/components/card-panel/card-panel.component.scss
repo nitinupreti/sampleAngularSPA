@@ -1,0 +1,70 @@
+.container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card-panel {
+    background-color: white;
+
+    .card-title {
+        background-color: #003764;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        i:not(.ion-key):before {
+            content: ' ';
+            height: 30px;
+            width: 30px;
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width: 640px) {
+            min-height: initial !important;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            min-height: initial !important;
+        }
+    }
+
+    li {
+        list-style-type: disc;
+        margin-bottom: 1rem;
+    }
+}
+
+.laz-icon:before {
+    content: ' ';
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased; }
+
+.laz-icon-twitter:before {
+    background-image: url("https://www.lazardassetmanagement.com/content../Images/ic-twitter.svg");
+}
+
+.laz-icon-linkedin:before {
+    background-image: url("https://www.lazardassetmanagement.com/content../Images/ic-linkedin.svg");
+}
+
+.laz-icon-email:before {
+    background-image: url("https://www.lazardassetmanagement.com/content../Images/ic-email.svg");
+}
+p{
+line-height: 1.25 !important;
+}

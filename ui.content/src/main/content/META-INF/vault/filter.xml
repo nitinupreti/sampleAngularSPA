@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/sampleangularspa" mode="merge"/>
+    <filter root="/content/sampleangularspa" mode="merge"/>
+    <filter root="/content/dam/sampleangularspa/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/sampleangularspa" mode="merge"/>
+</workspaceFilter>

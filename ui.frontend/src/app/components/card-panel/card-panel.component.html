@@ -1,0 +1,61 @@
+<div class="bg-white mv3 ma3-ns lh-title card-panel flex-auto ng-isolate-scope container" panel-title="Chart of the Week"
+  background-color="item.endColor" ng-repeat="item in vm.data.mainFeaturedItems">
+  <div class="card-title"
+    ng-style="{'background-color': backgroundColor, 'color': titleColor, 'min-height': minTitleHeight}"
+    ng-click="titleOnClick &amp;&amp; openTitleLink($event)"
+    ng-keyup="titleOnClick &amp;&amp; ( ($event.keyCode === 13) || (isAccordion &amp;&amp; $event.keyCode === 32) )? openTitleLink($event) :  null"
+    ng-class="{ 'pointer': titleOnClick &amp;&amp; ( tile.url || tile.document || isAccordion ), 'accordion': isAccordion}"
+    tabindex="0" style="background-color: rgb(0, 176, 175);">
+    <p class="f3 pa3 dib ma0 ng-binding">{{title}}</p>
+  </div>
+  <div class="h-100">
+    <div ng-if="item.image.url" class="pa3 ng-isolate-scope" chart-image-alt="item.title" description="item.description"
+      chart-image="item.image.url" features="item.features" show-share-buttons="true" email-fn="vm.shareOnClick(type)"
+      linkedin-fn="vm.shareOnClick(type)" twitter-fn="vm.shareOnClick(type)">
+      <div class="flex flex-row justify-between">
+        <p class="f4 ng-binding ng-scope" ng-if="chartSubtitle &amp;&amp; !hideSubtitle"
+          ng-style="{'color': subtitleColor}">{{subtitle}}</p>
+        <div ng-if="showShareButtons" class="flex flex-row justify-end ng-scope">
+          <div class="pointer share-icons ng-isolate-scope" ng-repeat="social in ['twitter', 'linkedin', 'email']"
+            type="twitter" ng-click="shareOnClick(social)" ng-keyup="$event.keyCode === 13 ? shareOnClick(social): null"
+            use-laz-icon="true">
+
+
+            <div ng-if="useLazIcon" class="ng-scope">
+              <i class="laz-icon laz-icon-twitter ml3-ns ml2 ng-scope" tabindex="0" ng-if="type === 'twitter'"></i>
+
+            </div>
+          </div>
+          <div class="pointer share-icons ng-isolate-scope" ng-repeat="social in ['twitter', 'linkedin', 'email']"
+            type="linkedin" ng-click="shareOnClick(social)"
+            ng-keyup="$event.keyCode === 13 ? shareOnClick(social): null" use-laz-icon="true">
+
+
+            <div ng-if="useLazIcon" class="ng-scope">
+              <i class="laz-icon laz-icon-linkedin ml3-ns ml2 ng-scope" tabindex="0" ng-if="type === 'linkedin'"></i>
+
+            </div>
+          </div>
+          <div class="pointer share-icons ng-isolate-scope" ng-repeat="social in ['twitter', 'linkedin', 'email']"
+            type="email" ng-click="shareOnClick(social)" ng-keyup="$event.keyCode === 13 ? shareOnClick(social): null"
+            use-laz-icon="true">
+            <div ng-if="useLazIcon" class="ng-scope"><i class="laz-icon laz-icon-email ml3-ns ml2 ng-scope" tabindex="0"
+                ng-if="type === 'email'"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-column flex-column-m flex-row-ns items-start">
+        <img class="w-100 w-100-m w-two-thirds-ns" ng-class="{'w-two-thirds-ns': description}"
+          src={{fileReference}} alt="Chart of the Week"
+          title="Chart of the Week">
+        <div class="w-100 w-100-m w-third-ns lh-title mt3 mt3-m mt0-ns ml0 ml0-m ml3-ns ng-binding ng-scope"
+          ng-if="description" ng-bind-html="description | sanitize">
+          <p class="f5">{{description}}</p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
