@@ -26,4 +26,4 @@ export class CardPanelComponent implements OnInit {
 
 }
 
-MapTo('wknd/components/card-panel')(CardPanelComponent,CardPanelComponentEditConfig);
+MapTo('sampleangularspa/components/card-panel')(CardPanelComponent,CardPanelComponentEditConfig);
